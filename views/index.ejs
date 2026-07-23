@@ -73,9 +73,8 @@
             <% } %>
 
             <form action="/convert" method="POST" enctype="multipart/form-data">
-                <label for="pngFile">Select PNG Image:</label>
-                <input type="file" id="pngFile" name="pngFile" accept="image/png" required />
-                <button type="submit">Convert & Download ICO</button>
+                <input type="file" name="imageFile" accept="image/*" required />
+                <button type="submit">Convert to ICO</button>
             </form>
         </div>
 
