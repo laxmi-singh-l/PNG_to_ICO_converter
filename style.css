@@ -1,0 +1,35 @@
+/* Key Layout Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background: radial-gradient(circle at top right, #f8c1cc, #fff7ed);
+    padding: 3rem;
+}
+
+.script {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #ea580c;
+}
+
+.arch-image {
+    border-radius: 200px 200px 0 0;
+    object-fit: cover;
+}
+
+footer {
+    background-color: beige;
+    height: 10vmax;
+    width: 100%;
+
+
+}

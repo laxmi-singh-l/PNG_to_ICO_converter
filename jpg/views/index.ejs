@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PNG to ICO Converter</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #f4f4f9;
+                margin: 0;
+            }
+
+            .card {
+                background: #ffffff;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                color: #333;
+            }
+
+            .error {
+                background-color: #ffe6e6;
+                color: #d9534f;
+                padding: 0.75rem;
+                border-radius: 4px;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+
+            input[type="file"] {
+                margin-bottom: 1.5rem;
+                display: block;
+                width: 100%;
+            }
+
+            button {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="card">
+            <h1>PNG to .ICO Converter</h1>
+
+            <% if (error) { %>
+            <div class="error"><%= error %></div>
+            <% } %>
+
+            <form action="/convert" method="POST" enctype="multipart/form-data">
+                <label for="pngFile">Select PNG Image:</label>
+                <input type="file" id="pngFile" name="pngFile" accept="image/png" required />
+                <button type="submit">Convert & Download ICO</button>
+            </form>
+        </div>
+
+    </body>
+
+</html>
